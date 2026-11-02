@@ -16,6 +16,11 @@ add_executable(wallshader
     src/main.cpp
 )
 
+target_compile_definitions(wallshader
+    PRIVATE
+        VULKAN_HPP_NO_STRUCT_CONSTRUCTORS
+)
+
 target_link_libraries(wallshader
     PRIVATE
         Vulkan::Vulkan
